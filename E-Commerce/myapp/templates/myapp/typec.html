@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+
+<div class="container">
+   <h3>Typec</h3>
+</div>
+
+<hr>
+<div class="container">
+    <div class="row">
+        {% for typec in typec_list %}
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{{typec.item_image.url}}" class="card-img-top" alt="">
+                      <div class="card-body">
+                          <h5 class="card-title">{{typec.name}}</h5>
+                          <p class="card-text">${{typec.price}}</p>
+                          
+                      </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}                          
