@@ -18,4 +18,4 @@ urlpatterns = [
     path('login/', Login.as_view(), name = "login"),
     path("signup/", views.signup, name="signup"),
     path('logout/', views.logout, name="logout"),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
